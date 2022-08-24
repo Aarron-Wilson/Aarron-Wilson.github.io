@@ -1,7 +1,95 @@
 <!DOCTYPE html>
 <html>
-    <p style="background-image: url('nature.jpg');">
-        <div> Text with background image </div>
-    </p>
+    <body class="body">
+        <div class="menu">
+            <button class="menubutton"> Projects </button>
+            <button class="menubutton"> Contact </button>
+            <button class="menubutton"> About </button>
+        </div>
+
+        <p class="title"> Aarron Wilson </p>
+
+        <div class="projectrow">
+            <div class="project"> <button class="viewproject"> View </button> </div>
+            <div class="project"> <button class="viewproject"> View </button> </div>
+        </div>
+    </body>
 
 </html>
+
+<style>
+    .body
+    {
+        background-color: rgb(54, 54, 54);
+    }
+
+    .bodyold
+    {
+        background-image: url('blackandbluebackground.jpg');
+        background-repeat: no-repeat;
+    }
+
+    .projectrow
+    {
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: #151022;
+    }
+
+    .project
+    {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        width:200px;
+        height:100px;
+        margin: 10px;
+        align-items: flex-end;
+        background-color: #201b2c;
+    }
+    
+    .project:hover .viewproject
+    {
+        display: block;
+    }
+
+    .viewproject
+    {
+        display:none;
+        font-size: 25px;
+        position:relative;
+        bottom:0px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: #202020;
+        font-size: 30px;
+        }
+
+    .menubutton
+    {
+        color:white;
+        margin: 10px;
+        background-color:rgb(13, 27, 27);
+        display: inline-block;
+        font-size: 25px;
+        transition-duration: 0.2s;
+    }
+
+    .menubutton:hover
+    {
+        background-color:rgb(22, 22, 44);
+        color:gray;
+    }
+
+    .title
+    {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+    }
+
+</style>
