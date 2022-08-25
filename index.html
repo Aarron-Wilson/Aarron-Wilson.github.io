@@ -9,18 +9,50 @@
 
         <p class="title"> Aarron Wilson </p>
         
-        
-        <div class="projectrow">
-            <div class="project"> <button class="viewproject"> View </button> </div>
-            <div class="project"> <button class="viewproject"> View </button> </div>
+        <div class="projectsection">
+            <div class="whiteTitle">
+                Projects
+            </div>
+
+            <div class="projectrow">
+                <div class="projectContainer"> Roads
+                    <div class="project roadsproject"> <button class="viewproject"> View </button> </div>
+                </div>
+                
+                <div class="projectContainer"> Next project
+                    <div class="project"> <button class="viewproject"> View </button> </div>
+                </div>
+            </div>
         </div>
+
+        
     </body>
 </html>
 
 <style>
+    .projectContainer
+    {
+        font-size:30px;
+        color:white;
+        margin:10px;
+    }
+
+    .projectsection
+    {
+        background-color: #151022;
+    }
+
+    .whiteTitle
+    {
+        text-align: center;
+        color:white;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
     .body
     {
-        background-color: rgb(54, 54, 54);
+        background-color: rgb(15, 15, 20);
     }
 
     .bodyold
@@ -34,6 +66,7 @@
         display: flex;
         flex-wrap: nowrap;
         background-color: #151022;
+        justify-content: center;
     }
 
     .project
@@ -41,13 +74,18 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
-        width:200px;
-        height:100px;
+        width:500px;
+        height:575px;
         margin: 10px;
         align-items: flex-end;
         background-color: #201b2c;
     }
     
+    .roadsproject
+    {
+        background-image: url('RoadScreenshotResized.png');
+    }
+
     .project:hover .viewproject
     {
         display: block;
