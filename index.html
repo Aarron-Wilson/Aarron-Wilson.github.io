@@ -16,21 +16,178 @@
 
             <div class="projectrow">
                 <div class="projectContainer"> Roads
-                    <div class="project roadsproject"> <button class="viewproject"> View </button> </div>
+                    <div class="project roadsproject"> 
+                        <button class="viewproject" onclick="showRoadsInfo()"> View </button> 
+                        <div id="roadsinfo" class="roadspopup whiteTitle"> Roads
+                            <div style="font-size:20px;margin:10px">
+                                Roads is a traffic simulation game where your goal is to make as much money as possible. This is 
+                                done in 2 ways. The first is by maximizing the amount of customers. This is done by providing a 
+                                pathway from each house to every other house. But beware of traffic jams. Roads get slower as 
+                                traffic increases. The second way to maximize profits is to deliver customers to their destination
+                                quickly. The payout per customer is determined by the time to distance ratio. In other words you can
+                                have 30 hours to go from coast to coast but only 5 to travel from state to state. All in all your task
+                                is to make the highest performance road system for the lowest cost. 
+                            </div>
+
+                            <div class="buttonrow">
+                                <div class="viewRoadsCode">
+                                    <span class="githubicon">  </span>
+                                    <a class="mediumSize" style="margin:5px;" onclick="location.href='https://github.com/Aarron-Wilson/Roads/'"> View Project on GitHub </a>
+                                </div>
+
+                                <div class="closeRoadsInfo" onclick="showRoadsInfo()">
+                                    <span class="exiticon"> </span>
+                                    <div style="margin:5px;"> Close </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="projectContainer"> Next project
-                    <div class="project"> <button class="viewproject"> View </button> </div>
+                <div class="projectContainer"> Lighting Engine
+                    <div class="project lightingengine"> <button class="viewproject" onclick="toggleLightEnginePopup()"> View </button> </div>
+                    <div id="lightingenginepopup" class="lightingenginepopup whiteTitle"> Lighting Engine
+                        <div style="font-size: 20px; margin:10px">
+                            This is a c++ from scratch lighting engine capable of producing soft shadows. For performance
+                            reasons, it was built to utilze the graphics card. The core algorithm is stochastic ray tracing. 
+                        </div>
+                        
+                        <div class="buttonrow">
+                            <div class="viewRoadsCode">
+                                <span class="githubicon">  </span>
+                                <a style="font-size: 20px;margin-top:10px;margin-right:10px"  onclick="location.href='https://github.com/Aarron-Wilson/Lighting-Engine'"> View Project on GitHub </a>
+                            </div>
+
+                            <div class="closeRoadsInfo" onclick="toggleLightEnginePopup()">
+                                <span class="exiticon"> </span>
+                                <div style="margin:5px;"> Close </div>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </div>
-
-        
     </body>
 </html>
 
+<script>
+    function showRoadsInfo(){
+        var popup = document.getElementById("roadsinfo");
+        popup.classList.toggle("showroadpopup");
+    }
+
+    function toggleLightEnginePopup(){
+        var popup = document.getElementById("lightingenginepopup");
+        popup.classList.toggle("showlightingenginepopup");
+    }
+</script>
 
 <style>
+    .lightingenginepopup
+    {
+        display: none;
+        position: absolute;
+        left: 520px;
+        top: 200px;
+        background-color: rgb(25, 24, 24);
+        width: 700px;
+        height: 190px;
+    }
+
+    .showlightingenginepopup
+    {
+        display: inline-block;
+    }
+
+    .lightingengine
+    {
+        background-image: url('Lighting2.png');
+    }
+
+    .exiticon
+    {
+        background-image: url('exiticon.png');
+        width:25px;
+        height:25px;
+        margin: 5px;
+    }
+
+    .githubicon
+    {
+        background-image: url('GitHubIcon.png');
+        width:25px;
+        height:25px;
+        margin:10px;
+    }
+
+    .viewRoadsCode
+    {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        background-color: rgb(13, 8, 39);
+        border-width: 3px;
+        border-color: rgb(91, 91, 91);
+        border-style: solid;
+    }
+
+    .viewRoadsCode:hover
+    {
+        background-color: rgb(22, 15, 58);
+    }
+
+    .closeRoadsInfo
+    {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        border-width: 3px;
+        border-color: rgb(91, 91, 91);
+        border-style: solid;
+        background-color: rgb(13, 8, 39);
+        margin:5px;
+        font-size:20px;
+    }
+
+    .closeRoadsInfo:hover
+    {
+        background-color: rgb(22, 15, 58);
+    }
+
+    .buttonrow
+    {
+        display:flex;
+        justify-content: center;
+        
+    }
+
+    .mediumSize
+    {
+        font-size: 20px;
+    }
+
+    .roadspopup
+    {
+        display: none;
+        position: absolute;
+        left: 400px;
+        top: 150px;
+        background-color: rgb(25, 24, 24);
+        width: 700px;
+        height: 300px;
+    }
+
+    .showroadpopup
+    {
+        display: inline-block;
+    }
+
+    .hideroad
+    {
+        display: none;
+    }
+
     .projectContainer
     {
         font-size:30px;
@@ -56,12 +213,6 @@
         background-color: rgb(15, 15, 20);
     }
 
-    .bodyold
-    {
-        background-image: url('blackandbluebackground.jpg');
-        background-repeat: no-repeat;
-    }
-
     .projectrow
     {
         display: flex;
@@ -75,8 +226,8 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
-        width:500px;
-        height:575px;
+        width:200px;
+        height:200px;
         margin: 10px;
         align-items: flex-end;
         background-color: #201b2c;
@@ -84,7 +235,7 @@
     
     .roadsproject
     {
-        background-image: url('road1.png');
+        background-image: url('RoadScreenshotResized3.png');
     }
 
     .project:hover .viewproject
