@@ -2,24 +2,22 @@
 <html>
     <body class="body">
         <div class="menu">
-            <button class="menubutton"> Projects </button>
-            <button class="menubutton"> Contact </button>
-            <button class="menubutton"> About </button>
+            <div class="menubutton"> Projects </div>
+            <div class="menubutton"> Contact </div>
+            <div class="menubutton"> About </div>
         </div>
 
-        <p class="title"> Aarron Wilson </p>
+        <p style="font-family: Arial, Helvetica, sans-serif; color:rgb(0, 0, 0);text-align: center;font-size:32px;"> Aarron Wilson </p>
+        <p style="font-family: Arial, Helvetica, sans-serif;color:rgb(0, 0, 0);text-align: center;font-size:24px;"> Software Developer/Software Engineer</p>
         
-        <div class="projectsection">
-            <div class="whiteTitle">
-                 Projects
-            </div>
+        <div style="background-color:#16396a;color:rgb(255, 255, 255);text-align: center;font-size:32px;"> Projects </div>
 
-            <div class="projectrow">
-                <div class="projectContainer"> Roads
-                    <div class="project roadsproject"> 
-                        <button class="viewproject" onclick="showRoadsInfo()"> View </button> 
-                        <div id="roadsinfo" class="roadspopup whiteTitle"> Roads
-                            <div style="font-size:20px;margin:10px">
+        <div class="projectrow">
+            <div class="projectContainer"> Roads
+                <div class="project roadsproject"> 
+                    <button class="viewproject" onclick="showRoadsInfo()"> View </button> 
+                    <div id="roadsinfo" class="roadspopup"> Roads
+                        <div style="font-size:20px;margin:10px">
                                 Roads is a traffic simulation game where your goal is to make as much money as possible. This is 
                                 done in 2 ways. The first is by maximizing the amount of customers. This is done by providing a 
                                 pathway from each house to every other house. But beware of traffic jams. Roads get slower as 
@@ -27,47 +25,78 @@
                                 quickly. The payout per customer is determined by the time to distance ratio. In other words you can
                                 have 30 hours to go from coast to coast but only 5 to travel from state to state. All in all your task
                                 is to make the highest performance road system for the lowest cost. 
-                            </div>
-
-                            <div class="buttonrow">
-                                <div class="viewRoadsCode">
-                                    <span class="githubicon">  </span>
-                                    <a class="mediumSize" style="margin:5px;" onclick="location.href='https://github.com/Aarron-Wilson/Roads/'"> View Project on GitHub </a>
-                                </div>
-
-                                <div class="closeRoadsInfo" onclick="showRoadsInfo()">
-                                    <span class="exiticon"> </span>
-                                    <div style="margin:5px;"> Close </div>
-                                </div>
-                            </div>
-                            
                         </div>
-                    </div>
-                </div>
-                
-                <div class="projectContainer"> Lighting Engine
-                    <div class="project lightingengine"> <button class="viewproject" onclick="toggleLightEnginePopup()"> View </button> </div>
-                    <div id="lightingenginepopup" class="lightingenginepopup whiteTitle"> Lighting Engine
-                        <div style="font-size: 20px; margin:10px">
-                            This is a c++ from scratch lighting engine capable of producing soft shadows. For performance
-                            reasons, it was built to utilze the graphics card. The core algorithm is stochastic ray tracing. 
-                        </div>
-                        
+
                         <div class="buttonrow">
                             <div class="viewRoadsCode">
                                 <span class="githubicon">  </span>
-                                <a style="font-size: 20px;margin-top:10px;margin-right:10px"  onclick="location.href='https://github.com/Aarron-Wilson/Lighting-Engine'"> View Project on GitHub </a>
+                                <a class="mediumSize" style="margin:5px;" onclick="openRoadsGithub()"> View Project on GitHub </a>
                             </div>
 
-                            <div class="closeRoadsInfo" onclick="toggleLightEnginePopup()">
+                            <div class="closeRoadsInfo" onclick="showRoadsInfo()">
                                 <span class="exiticon"> </span>
                                 <div style="margin:5px;"> Close </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
+                
+            <div class="projectContainer"> Lighting Engine
+                <div class="project lightingengine"> <button class="viewproject" onclick="toggleLightEnginePopup()"> View </button> </div>
+                <div id="lightingenginepopup" class="lightingenginepopup"> Lighting Engine
+                    <div style="font-size: 20px; margin:10px">
+                        This is a c++ from scratch lighting engine capable of producing soft shadows. For performance
+                        reasons, it was built to utilze the graphics card. The core algorithm is stochastic ray tracing. 
+                    </div>
+                        
+                    <div class="buttonrow">
+                        <div class="viewRoadsCode">
+                            <span class="githubicon">  </span>
+                            <a style="font-size: 20px;margin-top:10px;margin-right:10px"  onclick="openLightingEngineGithub()"> View Project on GitHub </a>
+                        </div>
+
+                        <div class="closeRoadsInfo" onclick="toggleLightEnginePopup()">
+                            <span class="exiticon"> </span>
+                            <div style="margin:5px;"> Close </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="projectContainer"> Note Taker
+                <div id="notetakerpopup" class="notetakerpopup"> Note Taker
+                    <div style="color:rgb(255, 255, 255);font-size: 20px; margin:10px">
+                        Note taker is a knowledge base application built to organize and
+                        search your notes. The core technologies are VB.NET and Microsoft SQL Server. 
+                    </div>
+                        
+                    <div class="buttonrow">
+                        <div class="viewRoadsCode">
+                            <span class="githubicon">  </span>
+                            <div style="font-size: 25px;margin: 5px;" onclick="openNoteTakerGithub()">View Project on GitHub  </div>
+                        </div>
+    
+                        <div class="closeRoadsInfo" onclick="toggleNotesPopup()">
+                            <span class="exiticon"> </span>
+                            <div style="font-size: 25px;margin:5px;"> Close </div>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="project notetaker"> <button class="viewproject" onclick="toggleNotesPopup()"> View </button> </div>
+                
+            </div>
         </div>
+
+        <div style="margin:20px;"> </div>
+        <div style="background-color:#16396a;color:rgb(255, 255, 255);text-align: center;font-size:32px;"> Contact </div>
+
+        <div style="background-color:#3a6eb7;">
+            <div style="background-color:#3a6eb7;font-size:20px;color:white;text-align:center"> Email: aawils03@wsc.edu </div>
+            <div style="background-color:#3a6eb7;font-size:20px;color:white;text-align:center"> Phone: (402) 290-2409 </div>
+        </div>
+        
     </body>
 </html>
 
@@ -81,18 +110,73 @@
         var popup = document.getElementById("lightingenginepopup");
         popup.classList.toggle("showlightingenginepopup");
     }
+
+    function toggleNotesPopup(){
+        var popup = document.getElementById("notetakerpopup");
+        popup.classList.toggle("shownotetakerpopup");
+    }
+
+    function openRoadsGithub(){
+        window.open("https://github.com/Aarron-Wilson/Roads", "_blank");
+    }
+
+    function openLightingEngineGithub(){
+        window.open("https://github.com/Aarron-Wilson/Lighting-Engine", "_blank");
+    }
+
+    function openNoteTakerGithub(){
+        window.open("https://github.com/Aarron-Wilson/Note-Taker", "_blank");
+    }
 </script>
 
 <style>
+    .roadspopup
+    {
+        display: none;
+        position: absolute;
+        left: 400px;
+        top: 150px;
+        text-align: center;
+        color:rgb(255, 255, 255);
+        background-color:#16396a;
+        width: 700px;
+        height: 330px;
+    }
+
+    .showroadpopup
+    {
+        display: inline-block;
+    }
+
+    .notetakerpopup
+    {
+        display: none;
+        position: absolute;
+        left: 520px;
+        top: 150px;
+        color:rgb(255, 255, 255);
+        background-color:#16396a;
+        width: 700px;
+        height: 170px;
+        text-align: center;
+    }
+
+    .shownotetakerpopup
+    {
+        display: inline-block;
+    }
+
     .lightingenginepopup
     {
         display: none;
         position: absolute;
         left: 520px;
-        top: 200px;
-        background-color: rgb(25, 24, 24);
+        top: 150px;
+        color:rgb(255, 255, 255);
+        background-color:#16396a;
         width: 700px;
         height: 190px;
+        text-align: center;
     }
 
     .showlightingenginepopup
@@ -102,7 +186,12 @@
 
     .lightingengine
     {
-        background-image: url('Lighting2.png');
+        background-image: url('Lighting3.png');
+    }
+
+    .notetaker
+    {
+        background-image: url('notetaker.png');
     }
 
     .exiticon
@@ -118,7 +207,7 @@
         background-image: url('GitHubIcon.png');
         width:25px;
         height:25px;
-        margin:10px;
+        margin:5px;
     }
 
     .viewRoadsCode
@@ -126,10 +215,12 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
-        background-color: rgb(13, 8, 39);
+        background-color:#132b4a;
         border-width: 3px;
-        border-color: rgb(91, 91, 91);
+        border-color: rgb(13, 8, 39);
         border-style: solid;
+        margin:5px;
+        font-size:25px;
     }
 
     .viewRoadsCode:hover
@@ -143,11 +234,11 @@
         flex-wrap: nowrap;
         justify-content: center;
         border-width: 3px;
-        border-color: rgb(91, 91, 91);
+        border-color: rgb(23, 32, 72);
         border-style: solid;
-        background-color: rgb(13, 8, 39);
+        background-color: #132b4a;
         margin:5px;
-        font-size:20px;
+        font-size:25px;
     }
 
     .closeRoadsInfo:hover
@@ -167,21 +258,7 @@
         font-size: 20px;
     }
 
-    .roadspopup
-    {
-        display: none;
-        position: absolute;
-        left: 400px;
-        top: 150px;
-        background-color: rgb(25, 24, 24);
-        width: 700px;
-        height: 300px;
-    }
-
-    .showroadpopup
-    {
-        display: inline-block;
-    }
+    
 
     .hideroad
     {
@@ -191,13 +268,15 @@
     .projectContainer
     {
         font-size:30px;
-        color:white;
+        font-family: Arial, Helvetica, sans-serif;
+        color:rgb(252, 252, 252);
         margin:10px;
     }
 
     .projectsection
     {
-        background-color: #151022;
+        background-color: #16396a;
+        color: white;
     }
 
     .whiteTitle
@@ -210,14 +289,14 @@
 
     .body
     {
-        background-color: rgb(15, 15, 20);
+        background-color: rgb(255, 255, 255);
     }
 
     .projectrow
     {
         display: flex;
         flex-wrap: nowrap;
-        background-color: #151022;
+        background-color: #3a6eb7;
         justify-content: center;
     }
 
@@ -230,7 +309,7 @@
         height:200px;
         margin: 10px;
         align-items: flex-end;
-        background-color: #201b2c;
+        background-color: #33294b;
     }
     
     .roadsproject
@@ -254,24 +333,23 @@
     .menu {
         display: flex;
         flex-wrap: nowrap;
-        background-color: #202020;
+        background-color: #16396a;
         font-size: 30px;
         }
 
     .menubutton
     {
-        color:white;
-        margin: 10px;
-        background-color:rgb(13, 27, 27);
-        display: inline-block;
+        color:rgb(255, 255, 255);
         font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 10px;
+        
         transition-duration: 0.2s;
     }
 
     .menubutton:hover
     {
-        background-color:rgb(22, 22, 44);
-        color:gray;
+        color:rgb(181, 195, 223);
     }
 
     .title
